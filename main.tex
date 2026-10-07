@@ -1,0 +1,112 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- Tegnsett og språk ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[norsk]{babel}
+
+% --- Skrifttype: Times New Roman ---
+\usepackage{newtxtext, newtxmath}
+
+% --- Marger og linjeavstand ---
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% --- Typografi og sitatpakker ---
+\usepackage{csquotes}
+\usepackage{microtype}
+
+% --- Referansestil: APA 7. utgave med BibLaTeX ---
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+% --- Lenker (svarte i brødtekst) ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    anchorcolor=black,
+    citecolor=black,
+    filecolor=black,
+    menucolor=black,
+    runcolor=black,
+    urlcolor=black
+}
+
+\begin{document}
+
+% ==============================================================================
+% FORSIDE
+% ==============================================================================
+\begin{titlepage}
+    \centering
+    \vspace*{1.2cm}
+    
+    {\Huge\bfseries Det hybride arbeidslivet i spill\par}
+    \vspace{0.6cm}
+    {\Large\itshape En organisasjonsfaglig analyse av hjemmekontor, motivasjon og kultur i DNB, Vend og DNV\par}
+    
+    \vspace{1.2cm}
+    \rule{0.6\textwidth}{0.5pt}\par
+    \vspace{1.2cm}
+    
+    {\large\textbf{Emne:}\ ORG1100 -- Organisasjon og ledelse (Høst 2026)\par}
+    \vspace{0.3cm}
+    {\large\textbf{Institusjon:}\ NTNU -- Norges teknisk-naturvitenskapelige universitet\par}
+    
+    \vspace{1.2cm}
+    
+    {\large\textbf{Forfattere / Gruppe:}\par}
+    \vspace{0.4cm}
+    {\large
+    Adrian Andersen\par
+    Anders Taraldsen\par
+    Ellen Rebekka Strøm\par
+    Marte Wenneck Rasmussen\par
+    August Evjen Sæther\par
+    Andreas Dullum\par
+    }
+    
+    \vfill
+    
+    \noindent
+    \fbox{
+      \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+        \centering
+        \vspace{3pt}
+        \small
+        \textbf{Erklæring om bruk av kunstig intelligens (KI):} Generative språkmodeller er benyttet som faglig diskusjonspartner, til strukturering av disposisjon og til konvertering av kildedokumenter til \LaTeX. Alle faglige resonnementer, analyser og vurderinger er gjennomført og kvalitetssikret av gruppens medlemmer.
+        \vspace{3pt}
+      }
+    }
+    \vspace*{0.2cm}
+\end{titlepage}
+
+% ==============================================================================
+% INNHOLDSFORTEGNELSE
+% ==============================================================================
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+% ==============================================================================
+% HOVEDDELER
+% ==============================================================================
+\input{sections/01_del1}
+
+\newpage
+\input{sections/02_del2}
+
+\newpage
+\input{sections/03_del3}
+
+% ==============================================================================
+% LITTERATURLISTE
+% ==============================================================================
+\newpage
+\printbibliography[title={Litteraturliste}]
+
+\end{document}
